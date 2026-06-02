@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "resume-engine"
+version = "0.1.0"
+description = "Self-improving AI resume generation engine"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.0",
+    "pydantic>=2.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["engine*"]

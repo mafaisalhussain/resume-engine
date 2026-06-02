@@ -1,0 +1,7 @@
+FROM qwen3.5:9b
+
+# Expand context window to fit the full knowledge base (~10K tokens)
+PARAMETER num_ctx 32768
+
+# Disable thinking mode — we need deterministic, clean output only
+PARAMETER temperature 0.3
